@@ -1,0 +1,17 @@
+.signature {
+  display: flex;
+  flex-direction: column;
+}
+.signature__templates {
+  display: flex;
+  flex-direction: column;
+}
+.signature__templates .signature--template {
+  display: flex;
+  flex-direction: column;
+}
+.signature__templates .signature--template span {
+  display: block;
+}
+
+/*# sourceMappingURL=styles.css.map */

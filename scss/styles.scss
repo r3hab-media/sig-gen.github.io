@@ -1,0 +1,21 @@
+//mixins
+@use 'mixins' as *;
+
+.signature {
+  display: flex;
+  flex-direction: column;
+
+  &__templates {
+    display: flex;
+    flex-direction: column;
+
+    .signature--template {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        display: block;
+      }
+    }    
+  }
+}
