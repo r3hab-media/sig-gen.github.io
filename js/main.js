@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		const template3 = `
       <div class="sig card">
         <div class="card-body">
-          <div class="sig__name">${name}${pnLettersTrue}${pronoun ? `<span class="sig__pronoun">(${pronoun})</span>` : ""}</div>
+          <div class="sig__name">${name}${pnLettersTrue} ${pronoun ? `<span class="sig__pronoun">(${pronoun})</span>` : ""}</div>
           ${title ? `<div class="sig__pos"> <span>${title} | City of Scottsdale</span></div>` : ""}
           <div class="sig__phones">
             ${formattedOfficePhone ? `<span class="sig__phones--p"><span>o</span> ${formattedOfficePhone}</span>` : ""}
