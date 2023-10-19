@@ -1,17 +1,69 @@
-.signature {
-  display: flex;
-  flex-direction: column;
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+h2 {
+  margin-block-end: 0;
 }
-.signature__templates {
-  display: flex;
-  flex-direction: column;
+
+img {
+  max-width: 100%;
+  height: auto;
 }
-.signature__templates .signature--template {
-  display: flex;
-  flex-direction: column;
+
+h4 {
+  margin: 0;
+  padding: 0;
 }
-.signature__templates .signature--template span {
-  display: block;
+
+.card + .card {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 992px) {
+  .card + .card {
+    margin-top: unset;
+  }
+}
+
+.sig {
+  font-size: 1rem;
+}
+.sig + .sig {
+  margin-top: 4rem;
+}
+.sig__name, .sig__pos, .sig__phones, .sig__link, .sig__social, .sig__address {
+  margin-top: 0.2rem;
+}
+.sig__name {
+  color: #0074ba;
+  font-weight: 800;
+}
+.sig__pronoun {
+  color: black;
+  font-weight: 400;
+  font-size: 90%;
+}
+.sig__pos span {
+  font-weight: 400;
+}
+.sig__phones {
+  display: flex;
+}
+.sig__phones--m {
+  margin-left: 0.5rem;
+}
+.sig__phones span {
+  color: black;
+}
+.sig__phones span span {
+  color: #0074ba;
+  font-weight: 700;
+  margin-right: 0.2rem;
+}
+.sig__address {
+  margin: 1.5rem 0;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.sig__link {
+  color: black;
 }
 
 /*# sourceMappingURL=styles.css.map */
