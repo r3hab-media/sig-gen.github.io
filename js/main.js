@@ -79,18 +79,20 @@ document.addEventListener("DOMContentLoaded", function () {
           ${title ? `<div class="sig__pos"> <span>${title} | City of Scottsdale</span></div>` : ""}
           <div class="sig__phones">
             ${formattedOfficePhone ? `<span class="sig__phones--p"><span>o</span> ${formattedOfficePhone}</span>` : ""}
-            ${formattedMobilePhone ? `<span class="sig__phones--m"><span>c</span> ${formattedMobilePhone}</span>` : ""}
+            ${formattedMobilePhone ? `<span class="sig__phones--m"><span> &nbsp;c</span> ${formattedMobilePhone}</span>` : ""}
           </div>
           ${
 						deptName && street && zipCode
 							? `
-            <div class="sig__address">
-              <address>
-                <span class="sig__address--dept">${deptName}</span><br>
-                <span class="sig__address--street">${street}</span><br>
-                Scottsdale, AZ <span>${zipCode}</span>
-              </address>
-            </div>
+              <br>
+              <div class="sig__address">
+                <address>
+                  <span class="sig__address--dept">${deptName}</span><br>
+                  <span class="sig__address--street">${street}</span><br>
+                  Scottsdale, AZ <span>${zipCode}</span>
+                </address>
+              </div>
+              <br>
           `
 							: ""
 					}
@@ -103,4 +105,22 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
 		document.getElementById("template3-output").innerHTML = template3;
 	}
+
+	document.addEventListener("click", function (event) {
+		let target = event.target;
+		// Traverse up the DOM to find the closest .sig.card if the clicked element isn't it
+		while (target && !target.classList.contains("sig")) {
+			target = target.parentElement;
+		}
+
+		// If .sig.card was found, proceed with selection
+		if (target && target.classList.contains("card")) {
+			let range = document.createRange();
+			range.selectNodeContents(target);
+
+			let selection = window.getSelection();
+			selection.removeAllRanges();
+			selection.addRange(range);
+		}
+	});
 });
