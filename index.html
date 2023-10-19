@@ -6,7 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Signature Generator</title>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css' integrity='sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==' crossorigin='anonymous'/>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css'
+    integrity='sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=='
+    crossorigin='anonymous' />
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/main.js" defer></script>
 </head>
@@ -17,7 +19,8 @@
       <div class="signature__form">
         <div class="row mb-3">
           <div class="col-sm-12 col-md-3 col-lg-2">
-            <img src="https://s3.amazonaws.com/envisio-pdv2-production/d/31/d3198640a148c170d72b557c84435b74.jpeg" alt="">
+            <img src="https://s3.amazonaws.com/envisio-pdv2-production/d/31/d3198640a148c170d72b557c84435b74.jpeg"
+              alt="">
           </div>
           <div class="col-sm-12 col-md-9 col-lg-10">
             <h2>Email Signature Generator</h2>
@@ -37,7 +40,7 @@
                 <input type="text" class="form-control" id="pnLetters" placeholder="Degree, Certification, etc.">
                 <label for="pnLetters">Degree, Certification, etc.</label>
               </div>
-            </div>          
+            </div>
             <div class="col-sm-12 col-md-6 col-xl-3">
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="pronoun" placeholder="Your Pronoun">
@@ -70,28 +73,36 @@
           </div>
           <hr>
           <div class="row">
-            <h5>Department &amp; Address:</h5>
-            <div class="col-sm-12 col-md-6 col-lg-4">
+            <h5>Department Name, URL &amp; Address:</h5>
+            <div class="col-sm-12 col-md-6">
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="deptName" placeholder="Department Name">
                 <label for="deptName">Department Name</label>
               </div>
-            </div>          
-            <div class="col-sm-12 col-md-6 col-lg-4">
+            </div>
+            <div class="col-sm-12 col-md-6">
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="street" placeholder="Street Address">              
+                <input type="text" class="form-control" id="deptUrl" placeholder="Department URL">
+                <label for="deptUrl">Department URL</label>
+                <small class="fw-bold">* i.e.; https://scottsdaleaz.gov/police</small>
+                <small class="fw-bold d-block">** If nothing entered, will default to COS main website</small>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="street" placeholder="Street Address">
                 <label for="street">Street Address</label>
                 <small class="fw-bold">* City and State are not required</small>
               </div>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="col-sm-12 col-md-6">
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="zipCode" placeholder="Zip Code">
                 <label for="zipCode">Zip Code</label>
               </div>
             </div>
           </div>
-          <hr>
+          <!-- <hr>
           <div class="row">
             <h5>Department URL:</h5>
             <div class="col-sm-12 col-md-6">
@@ -108,19 +119,29 @@
                 <label for="deptUrlDisplay">Department URL Text</label>
               </div>
             </div>
-          </div>
+          </div> -->
           <hr>
           <div class="row">
             <h5>Social Media:</h5>
             <div class="col-sm-12">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="socialMediaChoice" id="socialMediaChoice1" value="socialMediaDefault" checked>
-                <label class="form-check-label" for="socialMediaChoice1">
-                  Use Scottsdale's Social Media page <a href="https://www.scottsdaleaz.gov/news/social-media" target="_blank">(view)</a>
+                <input type="radio" class="form-check-input" name="socialMediaChoice" id="socialMediaChoice0"
+                  value="socialMediaNone" checked>
+                <label class="form-check-label" for="socialMediaChoice0">
+                  No Social Media
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="socialMediaChoice" id="socialMediaChoice2" value="socialMediaLinks">
+                <input class="form-check-input" type="radio" name="socialMediaChoice" id="socialMediaChoice1"
+                  value="socialMediaDefault">
+                <label class="form-check-label" for="socialMediaChoice1">
+                  Use Scottsdale's Social Media page <a href="https://www.scottsdaleaz.gov/news/social-media"
+                    target="_blank">(view)</a>
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="socialMediaChoice" id="socialMediaChoice2"
+                  value="socialMediaLinks">
                 <label class="form-check-label" for="socialMediaChoice2">
                   Use your department social media
                 </label>
@@ -151,8 +172,8 @@
                 <input type="text" class="form-control" id="youtube" placeholder="YouTube">
                 <label for="youtube"><i class="fa-brands fa-youtube"></i> YouTube URL</label>
               </div>
-            </div>          
-          </div>        
+            </div>
+          </div>
           <button type="button" class="btn btn-primary btn-lg" id="generate-button">Create Signature</button>
         </form>
       </div>
