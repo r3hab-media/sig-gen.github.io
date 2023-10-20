@@ -53,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		const street = document.getElementById("street").value;
 		const zipCode = document.getElementById("zipCode").value;
 		const deptUrl = document.getElementById("deptUrl").value || "https://scottsdaleaz.gov";
-		// const deptUrlDisplay = document.getElementById("deptUrlDisplay").value || "City of Scottsdale";
 		const facebook = document.getElementById("facebook").value;
 		const twitter = document.getElementById("twitter").value;
 		const instagram = document.getElementById("instagram").value;
