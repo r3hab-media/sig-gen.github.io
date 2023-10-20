@@ -71,6 +71,7 @@ footer .footer--year .thisYear {
 
 .sig {
   font-size: 1rem;
+  box-shadow: 0 0 5px #0074ba;
 }
 .sig + .sig {
   margin-top: 4rem;

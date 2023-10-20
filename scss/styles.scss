@@ -3,6 +3,8 @@
 //mixins
 @import 'mixins';
 
+$blue: #0074ba;
+
 body {
 	position: relative;
 }
@@ -30,7 +32,7 @@ h4 {
 }
 
 .last-updated {
-	background-color: #0074ba;
+	background-color: $blue;
 	color: white;
 	display: flex;
 	justify-content: center;
@@ -59,8 +61,6 @@ footer {
   }
 
 	.footer {
-		&--title {
-		}
 		&--year {
       @include phone-xsmall {
         margin-left: .5rem;
@@ -80,6 +80,8 @@ footer {
 .sig {
 	font-size: 1rem;
 
+  box-shadow: 0 0 5px $blue;
+
 	& + .sig {
 		margin-top: 4rem;
 	}
@@ -93,7 +95,7 @@ footer {
 		margin-top: 0.2rem;
 	}
 	&__name {
-		color: #0074ba;
+		color: $blue;
 		font-weight: 800;
 	}
 
@@ -117,7 +119,7 @@ footer {
 			color: black;
 
 			span {
-				color: #0074ba;
+				color: $blue;
 				font-weight: 700;
 				margin-right: 0.2rem;
 			}

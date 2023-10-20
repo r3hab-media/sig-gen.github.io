@@ -6,8 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	const generateButton = document.getElementById("generate-button");
 
 	// Event Listener for Generate Button
-	generateButton.addEventListener("click", function () {
+	generateButton.addEventListener("click", function (e) {
 		generateSignatures();
+		e.preventDefault();
 	});
 
 	// Event Listeners for social media choices
@@ -124,29 +125,29 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	});
 
-  //get last updated date
-  const lastUpdatedSpan = document.getElementById("lastUpdated");
-  const lastModifiedDate = new Date(document.lastModified);
+	//get last updated date
+	const lastUpdatedSpan = document.getElementById("lastUpdated");
+	const lastModifiedDate = new Date(document.lastModified);
 
-  let hours = lastModifiedDate.getHours();
-  let minutes = lastModifiedDate.getMinutes();
-  const ampm = hours >= 12 ? 'PM' : 'AM';
-  
-  // Convert to 12-hour format
-  hours = hours % 12;
-  hours = hours ? hours : 12; // '0' should be '12'
+	let hours = lastModifiedDate.getHours();
+	let minutes = lastModifiedDate.getMinutes();
+	const ampm = hours >= 12 ? "PM" : "AM";
 
-  // Add a leading zero if needed
-  minutes = minutes < 10 ? '0' + minutes : minutes;
+	// Convert to 12-hour format
+	hours = hours % 12;
+	hours = hours ? hours : 12; // '0' should be '12'
 
-  // Format the date and time: MM/DD/YYYY HH:MM:SS AM/PM
-  const formattedDate = `${lastModifiedDate.getMonth() + 1}/${lastModifiedDate.getDate()}/${lastModifiedDate.getFullYear()} ${hours}:${minutes} ${ampm}`;
+	// Add a leading zero if needed
+	minutes = minutes < 10 ? "0" + minutes : minutes;
 
-  lastUpdatedSpan.textContent = formattedDate;
+	// Format the date and time: MM/DD/YYYY HH:MM:SS AM/PM
+	const formattedDate = `${lastModifiedDate.getMonth() + 1}/${lastModifiedDate.getDate()}/${lastModifiedDate.getFullYear()} ${hours}:${minutes} ${ampm}`;
+
+	lastUpdatedSpan.textContent = formattedDate;
 });
 
 //get current year and display
 var currYr = new Date().getFullYear();
-document.querySelectorAll('.thisYear').forEach(function(element) {
-  element.textContent = currYr;
+document.querySelectorAll(".thisYear").forEach(function (element) {
+	element.textContent = currYr;
 });
