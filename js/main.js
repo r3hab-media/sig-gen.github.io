@@ -72,10 +72,10 @@ document.addEventListener("DOMContentLoaded", function () {
 		const formattedOfficePhone = formatPhoneNumber(officePhone);
 		const formattedMobilePhone = formatPhoneNumber(mobilePhone);
 
-		const template3 = `
+		const template = `
       <div class="sig card">
         <div class="card-body">
-          <div class="sig__name">${name}${pnLettersTrue} ${pronoun ? `<span class="sig__pronoun">(${pronoun})</span>` : ""}</div>
+          <div class="sig__name">${name}${pnLettersTrue}${pronoun ? `<span class="sig__pronoun"> (${pronoun})</span>` : ""}</div>
           ${title ? `<div class="sig__pos"> <span>${title} | City of Scottsdale</span></div>` : ""}
           <div class="sig__phones">
             ${formattedOfficePhone ? `<span class="sig__phones--p"><span>o</span> ${formattedOfficePhone}</span>` : ""}
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
       </div>
     `;
-		document.getElementById("template3-output").innerHTML = template3;
+		document.getElementById("template-output").innerHTML = template;
 	}
 
 	document.addEventListener("click", function (event) {
@@ -123,4 +123,30 @@ document.addEventListener("DOMContentLoaded", function () {
 			selection.addRange(range);
 		}
 	});
+
+  //get last updated date
+  const lastUpdatedSpan = document.getElementById("lastUpdated");
+  const lastModifiedDate = new Date(document.lastModified);
+
+  let hours = lastModifiedDate.getHours();
+  let minutes = lastModifiedDate.getMinutes();
+  const ampm = hours >= 12 ? 'PM' : 'AM';
+  
+  // Convert to 12-hour format
+  hours = hours % 12;
+  hours = hours ? hours : 12; // '0' should be '12'
+
+  // Add a leading zero if needed
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+
+  // Format the date and time: MM/DD/YYYY HH:MM:SS AM/PM
+  const formattedDate = `${lastModifiedDate.getMonth() + 1}/${lastModifiedDate.getDate()}/${lastModifiedDate.getFullYear()} ${hours}:${minutes} ${ampm}`;
+
+  lastUpdatedSpan.textContent = formattedDate;
+});
+
+//get current year and display
+var currYr = new Date().getFullYear();
+document.querySelectorAll('.thisYear').forEach(function(element) {
+  element.textContent = currYr;
 });

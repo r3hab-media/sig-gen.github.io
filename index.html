@@ -14,6 +14,7 @@
 </head>
 
 <body>
+  <p class="last-updated">Last updated: <span id="lastUpdated"></span></p>
   <div class="signature">
     <div class="container p-5">
       <div class="signature__form">
@@ -25,7 +26,16 @@
           <div class="col-sm-12 col-md-9 col-lg-10">
             <h2>Email Signature Generator</h2>
           </div>
+          <div class="col-sm-12">
+            <div class="card border-0">
+              <div class="card-body">
+                <p class="card-text fw-bold">Your email signature is a small but mighty branding tool. Using our centralized signature generator ensures we consistently convey our World Class City image. At minimum, your email signature should have your name, title and our city website address.</p>
+                <p class="card-text fw-bold">Fill out your information in the fields you would like to appear in your email signature - it is okay to skip fields, only your name and title will be required. When you are finished, click on "Create Signature" to generate your personalized email signature.</p>
+              </div>
+            </div>
+          </div>
         </div>
+
         <form id="signature--form">
           <div class="row">
             <h5>Personal Info:</h5>
@@ -39,12 +49,14 @@
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="pnLetters" placeholder="Degree, Certification, etc.">
                 <label for="pnLetters">Degree, Certification, etc.</label>
+                <small class="fw-bold input-helper">PhD, MBA, MSc, etc.</small>
               </div>
             </div>
             <div class="col-sm-12 col-md-6 col-xl-3">
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="pronoun" placeholder="Your Pronoun">
                 <label for="pronoun">Your Pronouns</label>
+                <small class="fw-bold input-helper">she/her, he/him, etc.</small>
               </div>
             </div>
             <div class="col-sm-12 col-md-6 col-xl-3">
@@ -57,7 +69,7 @@
           <hr>
           <div class="row">
             <h5>Contact Info:</h5>
-            <small class="fw-bold">* i.e.; 480-339-1212</small>
+            <small class="fw-bold input-helper">i.e.; 480-339-1212</small>
             <div class="col-sm-12 col-md-6">
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="officePhone" placeholder="Office Phone">
@@ -84,15 +96,16 @@
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="deptUrl" placeholder="Department URL">
                 <label for="deptUrl">Department URL</label>
-                <small class="fw-bold">* i.e.; https://scottsdaleaz.gov/police</small>
-                <small class="fw-bold d-block">** If nothing entered, will default to COS main website</small>
+                <small class="fw-bold input-helper">i.e.; https://scottsdaleaz.gov/police</small>
+                <small class="fw-bold input-helper d-block">If nothing entered, will default to COS main website</small>
               </div>
             </div>
             <div class="col-sm-12 col-md-6">
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="street" placeholder="Street Address">
                 <label for="street">Street Address</label>
-                <small class="fw-bold">* City and State are not required</small>
+                <small class="fw-bold input-helper">City and State are not required (included in output
+                  automatically)</small>
               </div>
             </div>
             <div class="col-sm-12 col-md-6">
@@ -162,9 +175,33 @@
     </div>
     <div class="container p-5">
       <div class="signature__templates row">
-        <div class="col-sm-12 col-lg-6" id="template3-output"></div>
+        <div class="col-sm-12 col-lg-6" id="template-output"></div>
+        <div class="col-sm-12 col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Instructions:</h5>
+              <p class="card-text">
+                <ol>
+                  <li>Click anywhere inside the blue box to the left. The signature will highlight</li>
+                  <li>Right-click on the signature provided in the email template. Select "Copy."</li>
+                  <li>Open a new email in Outlook. Go to the "Signature" section. Click the down arrow and select "Signatures."</li>
+                  <li>In the Signatures window, click "New" and name the signature.</li>
+                  <li>Paste the copied signature into the new signature window.</li>
+                  <li>Select all and change the font to Aptos</li>
+                  <li>Click "OK" then click "Default Signatures..."</li>
+                  <li>Under "E-mail account," select the signature you created as the default.</li>
+                  <li>Click "OK." The signature will now apply to all new emails.</li>
+                </ol>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <footer>
+      <span class="footer--title">City of Scottsdale Email Signature Generator</span>
+      <span class="footer--year">Created <span class="thisYear"></span></span>
+    </footer>
   </div>
 </body>
 
