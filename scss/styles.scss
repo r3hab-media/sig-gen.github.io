@@ -1,7 +1,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
 
 //mixins
-@import 'mixins';
+@import "mixins";
 
 $blue: #0074ba;
 
@@ -31,6 +31,15 @@ h4 {
 	}
 }
 
+input[required] + label::after {
+	content: "*";
+	color: red;
+}
+
+.text-red {
+  color: red;
+}
+
 .last-updated {
 	background-color: $blue;
 	color: white;
@@ -46,7 +55,7 @@ h4 {
 }
 
 .form-floating .error {
-  color: red;
+	color: red;
 }
 
 .input-helper::before {
@@ -54,26 +63,26 @@ h4 {
 }
 
 footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
 
-  @include phone-xsmall {
-    flex-direction: row;
-    justify-content: center;
-  }
+	@include phone-xsmall {
+		flex-direction: row;
+		justify-content: center;
+	}
 
 	.footer {
 		&--year {
-      @include phone-xsmall {
-        margin-left: .5rem;
+			@include phone-xsmall {
+				margin-left: 0.5rem;
 
-        &::before {
-          content: '|';
-          margin-right: .5rem;
-        }
-      }
+				&::before {
+					content: "|";
+					margin-right: 0.5rem;
+				}
+			}
 			.thisYear {
 				margin-left: 0.2rem;
 			}
@@ -84,7 +93,7 @@ footer {
 .sig {
 	font-size: 1rem;
 
-  box-shadow: 0 0 5px $blue;
+	box-shadow: 0 0 5px $blue;
 
 	& + .sig {
 		margin-top: 4rem;
@@ -134,9 +143,9 @@ footer {
 		// margin: 1.5rem 0;
 		font-weight: 400;
 
-    address {
-      margin-bottom: 0;
-    }
+		address {
+			margin-bottom: 0;
+		}
 	}
 
 	&__link {

@@ -26,6 +26,15 @@ h4 {
   }
 }
 
+input[required] + label::after {
+  content: "*";
+  color: red;
+}
+
+.text-red {
+  color: red;
+}
+
 .last-updated {
   background-color: #0074ba;
   color: white;

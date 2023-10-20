@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 
 		if (titleError == "") {
-			titleErrorText.innerText = `Please add your name.`;
+			titleErrorText.innerText = `Please add your title.`;
 			titleErrorText.classList.add("error");
 		} else {
 			titleErrorText.innerText = ``;
