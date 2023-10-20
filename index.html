@@ -30,8 +30,12 @@
           <div class="col-sm-12">
             <div class="card border-0">
               <div class="card-body">
-                <p class="card-text fw-bold">Your email signature is a small but mighty branding tool. Using our centralized signature generator ensures we consistently convey our World Class City image. At minimum, your email signature should have your name, title and our city website address.</p>
-                <p class="card-text fw-bold">Fill out your information in the fields you would like to appear in your email signature - it is okay to skip fields, only your name and title will be required. When you are finished, click on "Create Signature" to generate your personalized email signature.</p>
+                <p class="card-text fw-bold">Your email signature is a small but mighty branding tool. Using our
+                  centralized signature generator ensures we consistently convey our World Class City image. At minimum,
+                  your email signature should have your name, title and our city website address.</p>
+                <p class="card-text fw-bold">Fill out your information in the fields you would like to appear in your
+                  email signature - it is okay to skip fields, only your name and title will be required. When you are
+                  finished, click on "Create Signature" to generate your personalized email signature.</p>
               </div>
             </div>
           </div>
@@ -44,6 +48,7 @@
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="name" placeholder="Full Name" required>
                 <label for="name">Full Name</label>
+                <small id="nameErrorText"></small>
               </div>
             </div>
             <div class="col-sm-12 col-md-6 col-xl-3">
@@ -64,6 +69,7 @@
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="title" placeholder="Your Title" required>
                 <label for="title">Your Title</label>
+                <small id="titleErrorText"></small>
               </div>
             </div>
           </div>
@@ -182,17 +188,18 @@
             <div class="card-body">
               <h5 class="card-title">Instructions:</h5>
               <p class="card-text">
-                <ol>
-                  <li>Click anywhere inside the blue box to the left. The signature will highlight</li>
-                  <li>Right-click on the signature provided in the email template. Select "Copy."</li>
-                  <li>Open a new email in Outlook. Go to the "Signature" section. Click the down arrow and select "Signatures."</li>
-                  <li>In the Signatures window, click "New" and name the signature.</li>
-                  <li>Paste the copied signature into the new signature window.</li>
-                  <li>Select all and change the font to Aptos</li>
-                  <li>Click "OK" then click "Default Signatures..."</li>
-                  <li>Under "E-mail account," select the signature you created as the default.</li>
-                  <li>Click "OK." The signature will now apply to all new emails.</li>
-                </ol>
+              <ol>
+                <li>Click anywhere inside the blue box to the left. The signature will highlight</li>
+                <li>Right-click on the signature provided in the email template. Select "Copy."</li>
+                <li>Open a new email in Outlook. Go to the "Signature" section. Click the down arrow and select
+                  "Signatures."</li>
+                <li>In the Signatures window, click "New" and name the signature.</li>
+                <li>Paste the copied signature into the new signature window.</li>
+                <li>Select all and change the font to Aptos</li>
+                <li>Click "OK" then click "Default Signatures..."</li>
+                <li>Under "E-mail account," select the signature you created as the default.</li>
+                <li>Click "OK." The signature will now apply to all new emails.</li>
+              </ol>
               </p>
             </div>
           </div>

@@ -45,6 +45,10 @@ h4 {
 	z-index: 10;
 }
 
+.form-floating .error {
+  color: red;
+}
+
 .input-helper::before {
 	content: "* ";
 }
@@ -127,8 +131,12 @@ footer {
 	}
 
 	&__address {
-		margin: 1.5rem 0;
+		// margin: 1.5rem 0;
 		font-weight: 400;
+
+    address {
+      margin-bottom: 0;
+    }
 	}
 
 	&__link {

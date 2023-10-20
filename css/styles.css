@@ -40,6 +40,10 @@ h4 {
   z-index: 10;
 }
 
+.form-floating .error {
+  color: red;
+}
+
 .input-helper::before {
   content: "* ";
 }
@@ -106,8 +110,10 @@ footer .footer--year .thisYear {
   margin-right: 0.2rem;
 }
 .sig__address {
-  margin: 1.5rem 0;
   font-weight: 400;
+}
+.sig__address address {
+  margin-bottom: 0;
 }
 .sig__link {
   color: black;

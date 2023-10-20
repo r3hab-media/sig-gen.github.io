@@ -8,6 +8,24 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Event Listener for Generate Button
 	generateButton.addEventListener("click", function (e) {
 		generateSignatures();
+
+		const nameError = document.getElementById("name").value;
+		const titleError = document.getElementById("title").value;
+
+		if (nameError == "") {
+			nameErrorText.innerText = `Please add your name.`;
+			nameErrorText.classList.add("error");
+		} else {
+			nameErrorText.innerText = ``;
+		}
+
+		if (titleError == "") {
+			titleErrorText.innerText = `Please add your name.`;
+			titleErrorText.classList.add("error");
+		} else {
+			titleErrorText.innerText = ``;
+		}
+
 		e.preventDefault();
 	});
 
@@ -82,15 +100,22 @@ document.addEventListener("DOMContentLoaded", function () {
             ${formattedOfficePhone ? `<span class="sig__phones--p"><span>o</span> ${formattedOfficePhone}</span>` : ""}
             ${formattedMobilePhone ? `<span class="sig__phones--m"><span> &nbsp;c</span> ${formattedMobilePhone}</span>` : ""}
           </div>
+
           ${
-						deptName && street && zipCode
+						deptName
 							? `
               <br>
               <div class="sig__address">
                 <address>
-                  <span class="sig__address--dept">${deptName}</span><br>
+                  ${deptName ? `<span class="sig__address--dept">${deptName}</span><br>` : ``}
+                  ${
+										street
+											? `
                   <span class="sig__address--street">${street}</span><br>
                   Scottsdale, AZ <span>${zipCode}</span>
+                  `
+											: ``
+									}
                 </address>
               </div>
               <br>
