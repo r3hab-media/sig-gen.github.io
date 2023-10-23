@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	generateButton.addEventListener("click", function (e) {
 		generateSignatures();
 
+    instructions.style.display = 'block';
+
 		const nameError = document.getElementById("name").value;
 		const titleError = document.getElementById("title").value;
 
@@ -91,6 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		const formattedMobilePhone = formatPhoneNumber(mobilePhone);
 
 		const template = `
+      <h5>Your Signature:</h5>
       <div class="sig card">
         <div class="card-body">
           <div class="sig__name">${name}${pnLettersTrue}${pronoun ? `<span class="sig__pronoun"> (${pronoun})</span>` : ""}</div>

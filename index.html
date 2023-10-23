@@ -21,8 +21,7 @@
       <div class="signature__form">
         <div class="row mb-3">
           <div class="col-sm-12 col-md-3 col-lg-2">
-            <img src="https://s3.amazonaws.com/envisio-pdv2-production/d/31/d3198640a148c170d72b557c84435b74.jpeg"
-              alt="">
+            <img src="img/logo.jpeg" alt="">
           </div>
           <div class="col-sm-12 col-md-9 col-lg-10">
             <h2>Email Signature Generator</h2>
@@ -78,17 +77,18 @@
           <hr>
           <div class="row">
             <h5>Contact Info:</h5>
-            <small class="fw-bold input-helper">i.e.; 480-339-1212</small>
             <div class="col-sm-12 col-md-6">
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="officePhone" placeholder="Office Phone">
                 <label for="officePhone">Office Phone</label>
+                <small class="fw-bold input-helper">i.e.; 480-339-1212</small>
               </div>
             </div>
             <div class="col-sm-12 col-md-6">
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="mobilePhone" placeholder="Mobile Phone">
                 <label for="mobilePhone">Mobile Phone</label>
+                <small class="fw-bold input-helper">i.e.; 480-339-1212</small>
               </div>
             </div>
           </div>
@@ -185,13 +185,13 @@
     <div class="container p-5">
       <div class="signature__templates row">
         <div class="col-sm-12 col-lg-6" id="template-output"></div>
-        <div class="col-sm-12 col-lg-6">
+        <div class="col-sm-12 col-lg-6 instructions" id="instructions" style="display: none;">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Instructions:</h5>
               <p class="card-text">
               <ol>
-                <li>Click anywhere inside the blue box to the left. The signature will highlight</li>
+                <li>Click anywhere inside the blue box <span class="mobile"></span>. The signature will highlight</li>
                 <li>Right-click on the signature provided in the email template. Select "Copy."</li>
                 <li>Open a new email in Outlook. Go to the "Signature" section. Click the down arrow and select
                   "Signatures."</li>

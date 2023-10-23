@@ -49,12 +49,23 @@ input[required] + label::after {
   z-index: 10;
 }
 
+.instructions span.mobile::after {
+  content: "above";
+}
+@media (min-width: 992px) {
+  .instructions span.mobile::after {
+    content: "to the left";
+  }
+}
+
 .form-floating .error {
   color: red;
 }
 
 .input-helper::before {
-  content: "* ";
+  font: var(--fa-font-solid);
+  content: "\f059";
+  margin-right: 0.5rem;
 }
 
 footer {
